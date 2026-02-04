@@ -20,30 +20,32 @@ const Index = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8">
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">
-                  Launch your MVP in days, not months
+                  Tamil Nadu BJYM Startup Cell
                 </span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight">
-                <span className="text-tertiary leading-[1]">Empowering</span>
+                <span className="text-tertiary leading-[1]">
+                  Youth Entrepreneurship &
+                </span>
                 <br />
                 <span className="bg-gradient-to-r from-primary leading-[1] via-primary to-secondary bg-clip-text text-transparent">
-                  Tamil Nadu's Startup
+                  Innovation Enablement
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-primary leading-[1] to-secondary bg-clip-text text-transparent">
-                  Ecosystem
+                  Platform
                 </span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <p className="text-lg md:text-xl text-tertiary/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Building a thriving network of 5,000 startups across 38
-                districts, creating 1 lakh jobs, and connecting founders,
-                investors, and mentors.
+                A structured initiative supporting youth to convert ideas,
+                social challenges, and research into startups, employment
+                opportunities, and sustainable economic growth.
               </p>
             </ScrollReveal>
 

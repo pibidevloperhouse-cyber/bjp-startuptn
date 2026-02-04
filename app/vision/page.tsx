@@ -68,9 +68,9 @@ const Vision = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Building a generation of empowered young entrepreneurs who will
-                shape Tamil Nadu's future through innovation, responsibility,
-                and sustainable impact.
+                To create a strong, youth-driven startup ecosystem in Tamil Nadu
+                that enables innovation, job creation, and sustainable economic
+                development.
               </p>
             </ScrollReveal>
           </div>
@@ -86,11 +86,10 @@ const Vision = () => {
                   Who We Are
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  BJYM Startup Cell - Tamil Nadu is a youth-driven initiative
-                  focused on nurturing the entrepreneurial spirit among young
-                  Indians. We are not a funding body or a political platform —
-                  we are an ecosystem dedicated to transforming aspiring
-                  innovators into confident, capable founders.
+                  The Tamil Nadu BJYM Startup Cell promotes innovation, startup
+                  creation, and employment generation by supporting youth across
+                  the State through mentorship, ecosystem access, and structured
+                  programs.
                 </p>
               </div>
             </ScrollReveal>
@@ -111,11 +110,12 @@ const Vision = () => {
                     Our Mission
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    To create a structured pre-incubation ecosystem that equips
-                    students, first-time founders, and early-stage innovators
-                    with the mentorship, skills, and network needed to transform
-                    their ideas into sustainable startups that create employment
-                    and drive development across Tamil Nadu.
+                    Encourage entrepreneurial thinking among youth. Convert
+                    social, civic, and agricultural challenges into innovation
+                    opportunities. Build skills in entrepreneurship and emerging
+                    technologies. Enable research and innovation to translate
+                    into startups. Support employment generation through startup
+                    pathways.
                   </p>
                 </CardContent>
               </Card>
@@ -131,11 +131,9 @@ const Vision = () => {
                     Our Vision
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    To establish Tamil Nadu as a leading hub for youth
-                    entrepreneurship by building a statewide network of
-                    innovation-ready young founders, supported by experienced
-                    mentors, and connected through a vibrant ecosystem that
-                    celebrates creativity, resilience, and impact.
+                    To create a strong, youth-driven startup ecosystem in Tamil
+                    Nadu that enables innovation, job creation, and sustainable
+                    economic development.
                   </p>
                 </CardContent>
               </Card>
