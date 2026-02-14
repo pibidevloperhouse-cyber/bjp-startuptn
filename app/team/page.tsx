@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { X, Linkedin, Twitter, Mail } from "lucide-react";
+import { X, Linkedin, Twitter, Mail, Instagram, Facebook } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import ParallaxHero from "@/components/ParallaxHero";
 import Image from "next/image";
+import Link from "next/link";
+import ParagraphReadMore from "@/components/ParagraphReadMore";
 
 interface TeamMember {
   id: number;
@@ -21,54 +23,110 @@ interface TeamMember {
   contribution: string;
   initials: string;
   orbit: 1 | 2 | 3;
+  twitter?: string;
+  linkedin?: string;
+  instagram?: string;
+  facebook?: string;
+  email?: string;
 }
 
 const coreCommittee: TeamMember[] = [
   {
     id: 1,
-    name: "Rajesh Kumar",
-    role: "State Coordinator",
+    name: "Vigneshwar K",
+    role: "Startup Outreach & College Engagement",
     domain: "Strategic Leadership",
     summary: "Driving statewide innovation ecosystem development",
-    bio: "15+ years experience in startup ecosystem development. Former incubation lead at IIT Madras Research Park.",
+    bio: "As the Founder of Routabit, I’m on a mission to transform how people experience India. Routabit is a platform that connects motorcycle enthusiasts with hidden cultural treasures, GI-tagged crafts, and offbeat destinations, fostering rural tourism and sustainable travel. By empowering rural communities and promoting local economies, Routabit creates travel experiences that are not just adventurous but deeply meaningful. <br /> I’ve worked with the Directorate General of Lighthouses and Lightships (DGLL) on lighthouse tourism and with the Archaeological Survey of India (ASI) to promote heritage tourism. These projects align with my goal of mapping India’s lost heritage and preserving our cultural legacy for generations to come. <br /> I served as a faculty member at the Loyola Institute of Business Administration, where I honed my passion for education, research, and thought leadership. Over the years, I developed 7 groundbreaking marketing theories and 4 innovative HR theories, earning recognition in the India Book of Records, Asia Book of Records, World Book of Records, and the Guinness Book of Records.<br /> My expertise has been sought on global platforms, including roles as an Advisory Council Member for Harvard Business Review and India Expert for Chegg Academy. These experiences reinforced my commitment to innovation and problem-solving on a global scale. <br /> I’ve also served as a corporate trainer, collaborating with organizations like Hyundai Motors, Indian Oil Corporation HQ, DMI and MMI Congregations, and Carisma Solutions. These experiences have allowed me to bring practical insights into leadership, innovation, and team development. <br /> With a unique blend of academic depth, entrepreneurial vision, and social impact, I am committed to building a future that celebrates innovation, heritage, and inclusion.",
     focusAreas: [
       "Ecosystem Strategy",
       "Government Liaison",
       "Industry Partnerships",
     ],
     contribution:
-      "Architecting the state-level framework for youth entrepreneurship and coordinating district-level activities.",
-    initials: "RK",
+      "Every traveler who’s ventured beyond the tourist map knows this truth: the soul of India doesn’t live in its cities — it hums in the stories whispered by its villages, sculpted in the forgotten stones of ancient temples, and sung in the dialects that change every hundred kilometers. <br /> Routabit’s vision is rooted in this very essence. It’s about helping travelers reconnect with the “real” India — the one that thrives in rural heartlands, where artisans still weave stories into their crafts, where recipes are heirlooms, and where heritage is not a monument, but a way of life. <br /> Through immersive experiences and cultural discovery, Routabit encourages travelers to slow down, listen, and learn — transforming journeys into acts of preservation. <br /> Tourism has always been one of the world’s most powerful economic engines. Yet, in India, much of that potential remains untapped — especially in rural regions where craftsmen, guides, and small businesses survive on seasonal footfall and word of mouth. <br /> Routabit’s philosophy is simple but transformative: travel can revive. <br /> Every explorer who stays in a rural homestay, supports a local artisan, or attends a traditional festival isn’t just passing through — they’re investing in a living economy, empowering communities to sustain their heritage with pride and dignity. <br /> By shining light on lesser-known destinations and encouraging mindful, sustainable exploration, Routabit helps shift tourism’s impact from crowded city centers to the people and places that need it most. <br /> Recognized under the Startup India Seed Fund Scheme (SISFS), Routabit continues its mission to turn exploration into empowerment — where every traveler becomes a storyteller, every journey a revival, and every destination a chance to help India rediscover itself. <br /> Because the future of travel isn’t about finding new places — it’s about rediscovering who we are.",
+    initials: "VK",
+    twitter: "https://x.com/iamvigneshwar_k?",
+    linkedin: "https://www.linkedin.com/in/vignu/",
+    instagram: "https://www.instagram.com/vigneshwar_kannan",
+    facebook: "https://www.facebook.com/profile.php?id=61572236648134",
     orbit: 1,
   },
   {
     id: 2,
-    name: "Priya Venkatesh",
-    role: "Program Director",
+    name: "Sarath Kumar R M",
+    role: "CSR & Strategic Partnerships",
     domain: "Mentorship & Training",
     summary: "Building structured pathways for founder success",
-    bio: "Serial entrepreneur with 3 successful exits. Passionate about nurturing first-generation founders.",
+    bio: "After graduating in engineering, I embarked on a career path as a business development manager in the education industry, where I honed my skills in relationship-building, strategy development, and market analysis and CSR projects. <br /> In 2019, fueled by a passion for innovation and a desire to create tangible impact, I took a bold leap into R&D for improvising Learning ability of special children (Autistic & ADHD). Result to that, I have successfully filed a patent for the work and presented 5 articles in various universities. <br /> Drawing upon my background in business development I started Steel Business, I approached this new venture with a strategic mindset, identifying market opportunities and forging key partnerships. <br /> Fast forward to 2024, and I am proud to announce that our steel business has achieved a remarkable turnover of INR 10 crore. Due to personal reasons, I handed over this to my partner and moved on. <br /> As we look ahead, I am excited to continue leveraging my entrepreneurial spirit and industry expertise to drive further growth and success. ",
     focusAreas: ["Mentor Network", "Curriculum Design", "Founder Development"],
     contribution:
-      "Designing comprehensive mentorship programs and building a network of 200+ industry mentors.",
-    initials: "PV",
+      "Introducing Curious Crew: Your Partner in Empowering Non-Profits <br /> Curious Crew is not just a company; it is a collective vision nurtured by individuals from diverse backgrounds united by a common mission. At Curious Crew, we provide exemplary services and unwavering support to small- scale non-profits and budding enterprises poised for growth. Our forte lies in offering comprehensive advisory services, bespoke website development, and digital solutions engineered to enhance market visibility. Moreover, we extend our assistance by crafting impactful fundraising campaigns tailored to local causes. <br /> As a cohesive unit, we stand ready to furnish IT services, management solutions, and consultancy to non-profits across India. At Curious Crew, we embody a team of inquisitive minds driven to deliver nothing short of excellence in service. <br /> Our Commitment to Non-Governmental Organizations (NGOs) <br /> ✓ Baseline Survey: We conduct meticulous baseline surveys to lay the groundwork for informed decision making. <br /> ✓ Project Planning & Budgeting: Our adept team excels in devising comprehensive project plans and budgetary frameworks aligned with organizational goals. <br /> ✓ Project Implementation: We assume the mantle of project execution with diligence and precision, ensuring seamless implementation from inception to fruition. <br /> ✓ Social Auditing in the Field: We undertake thorough social audits in the field to gauge project impact and efficacy. <br /> ✓ Reporting: Transparent and detailed reporting mechanisms ensure accountability and facilitate informed decision-making. <br /> Aligned with Sustainable Development Goals (SDGs), all our endeavors are geared towards fostering sustainable development and social progress. <br /> Noteworthy Projects: <br /> In the fiscal year 2021-2022, we spearheaded an educational initiative in Tamil Nadu targeting the learning gap among students in grades 1 to 5. Through the implementation of Activity-Based Learning (ABL) books in English and Mathematics, we reached over 10,000 beneficiaries across 18 districts of Tamil Nadu. <br /> In 2022-2023, we undertook project monitoring and conducted baseline surveys for forthcoming initiatives. <br /> In 2023-2024, we successfully completed educational projects in Tamil Nadu and Maharashtra, benefiting over 20,000 individuals. <br /> These projects encompassed the distribution of learning kits for Integrated Child Development Services (ICDS) centers and science kits for schools. <br /> Our Approach: <br /> 1. Full-Cycle Project Implementation: Acting on behalf of NGOs, we oversee projects from inception to completion, assuming responsibility for on-the-ground operations. <br /> 2. Expertise-Driven Solutions: Leveraging the expertise of our team, we adeptly navigate project complexities, ensuring successful outcomes. <br /> 3. Timely Execution: Our streamlined processes enable prompt project completion without compromising quality or efficacy. <br /> Partner with Curious Crew today and embark on a transformative journey towards organizational growth and social impact.",
+    initials: "SK",
+    linkedin: "https://www.linkedin.com/in/sarath-kumar-511bb5153",
     orbit: 1,
   },
   {
     id: 3,
-    name: "Vikram Narayanan",
-    role: "Policy Advisor",
+    name: "Mohan kumar V",
+    role: "Branding & Communications",
     domain: "Government Relations",
     summary: "Navigating regulatory frameworks for startups",
-    bio: "Former IAS officer with deep expertise in startup policy. Instrumental in drafting state startup policies.",
+    bio: "Mohan is a trans disciplinary creative force working at the intersection of design, innovation, healing, and human transformation. With a background in architecture, industrial design his career is a map of deep explorations across creative, intellectual, and spiritual domains. <br /> He is the founder of PEZA, a modular ecosystem for creative systems thinking — where design isn’t decoration, it’s a tool for realignment, awakening, and transformation. <br /> Mohan doesn’t just solve problems. He redesigns the conditions in which problems exist.",
     focusAreas: [
       "Policy Advocacy",
       "Regulatory Compliance",
       "Government Schemes",
     ],
     contribution:
-      "Helping startups leverage government schemes and navigate regulatory requirements.",
-    initials: "VN",
+      "PEZA is a modular, transdisciplinary studio built for creative systems thinking. <br /> We don’t design things. We engineer shifts — in form, function, and consciousness. <br /> We operate through six integrated verticals, each a tool in the ritual of transformation: <br /> PDS — Design Studio <br /> Architecture | Interiors | Branding | Experiential Space-Making From physical spaces to narrative systems, we craft environments that communicate, elevate, and transform. <br /> PFL — Fab Lab <br /> Prototyping | CNC | 3D Printing | Precision Manufacturing We build what others imagine. From concept to physical reality — fast, modular, and high-fidelity. <br /> PR&D — Research & Development <br /> IP Consulting | Reports | Product Roadmapping The lab within the lab — where ideas get dissected, decoded, and made future-proof. <br /> PHS — Healing Services <br /> Acupuncture | Magnetotherapy | Spatial Energy Design Where science meets subtlety. We apply energy medicine to spaces, people, and systems. <br /> PM — Metamorphosis <br /> Career Counseling | Leadership Development | Self-Exploration Helping individuals and teams evolve their inner architecture to meet their outer potential. <br /> PTS — Tech Services <br /> Blockchain | AI | IoT | Smart Environments Welcome to the PEZAVERSE — our experimental frontier for techdriven consciousness design. <br /> Core Ethos <br /> Design isn’t surface. It’s soul. We treat every project as a transformational system — connected, adaptive, and alive.",
+    initials: "MK",
+    facebook: "https://www.facebook.com/profile.php?id=61583507312817",
+    twitter: "https://x.com/vmohan_bjp",
+    instagram:
+      "https://www.instagram.com/vmohan_bjp?igsh=MWtsYmVpYWtydG0yMA%3D%3D&utm_source=qr",
+    linkedin: "https://www.linkedin.com/in/vmk0619/",
+    orbit: 1,
+  },
+  {
+    id: 4,
+    name: "Prithiviraj B",
+    role: "Social Media & Digital Outreach",
+    domain: "Government Relations",
+    summary: "Navigating regulatory frameworks for startups",
+    bio: "I am from Pollachi , from a Farming background .I worked in abroad for few years and returned to india to start my own venture , I started by 2021 in the name <br /> The Coconut Company and successfully running my business into Coconut Exports ",
+    focusAreas: [
+      "Policy Advocacy",
+      "Regulatory Compliance",
+      "Government Schemes",
+    ],
+    contribution:
+      "I am exporting Coconuts around 25+ countries with an annual Revenue of 25CR <br /> Also started up the Fertilizer company few months back <br /> I have been converted 1000 acres of barren lands into Agri lands in last 2 years <br /> I have been going for Guest lectures and public speaking for various colleges and Agri events ,Still now addressed more than 30,000 students all over india and moving forward to bring the young generation into startups",
+    initials: "PB",
+    facebook: "https://www.facebook.com/share/14Moi2ABJGK/",
+    twitter: "https://x.com/prithivi_agri?s=21",
+    instagram:
+      "https://www.instagram.com/prithivi_agripreneur?igsh=MWV3eGVkeHczZ2Nlaw%3D%3D&utm_source=qr",
+    linkedin:
+      "https://www.linkedin.com/in/prithivi-raj-coconutexporter?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    orbit: 1,
+  },
+  {
+    id: 5,
+    name: "Sivakumar R",
+    role: "IT, Data & Reporting Systems",
+    domain: "Government Relations",
+    summary: "Navigating regulatory frameworks for startups",
+    bio: "Basically I have been working as MDM - IT Solution Architect and owning IT Consulting firm based out of Coimbatore. <br /> Apart from IT Firm , have been running two Non-IT business. ",
+    focusAreas: [
+      "Policy Advocacy",
+      "Regulatory Compliance",
+      "Government Schemes",
+    ],
+    contribution:
+      "1. Founder - IT Consulting firm for Enterprise Level Customers. <br /> 2. Founder - Coco Pith Manufacturing Company. <br /> 3. Founder - Apparel / GlassRecycling Firm.",
+    initials: "SR",
+    linkedin: "https://www.linkedin.com/in/siva-kumar-79031423a/",
     orbit: 1,
   },
 ];
@@ -420,7 +478,7 @@ const Team = () => {
                     top: `calc(50% + ${y}%)`,
                     transform: "translate(-50%, -50%)",
                   }}
-                  whileHover={{ scale: 1.15 }}
+                  // whileHover={{ scale: 1.15 }}
                   onClick={() => handleMemberClick(member)}
                   onMouseEnter={() => setHoveredMember(member)}
                   onMouseLeave={() => setHoveredMember(null)}
@@ -464,7 +522,7 @@ const Team = () => {
                     top: `calc(50% + ${y}%)`,
                     transform: "translate(-50%, -50%)",
                   }}
-                  whileHover={{ scale: 1.15 }}
+                  // whileHover={{ scale: 1.15 }}
                   onClick={() => handleMemberClick(member)}
                   onMouseEnter={() => setHoveredMember(member)}
                   onMouseLeave={() => setHoveredMember(null)}
@@ -508,7 +566,7 @@ const Team = () => {
                     top: `calc(50% + ${y}%)`,
                     transform: "translate(-50%, -50%)",
                   }}
-                  whileHover={{ scale: 1.15 }}
+                  // whileHover={{ scale: 1.15 }}
                   onClick={() => handleMemberClick(member)}
                   onMouseEnter={() => setHoveredMember(member)}
                   onMouseLeave={() => setHoveredMember(null)}
@@ -677,7 +735,7 @@ const Team = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25 }}
-              className="w-full max-w-lg"
+              className="w-full max-w-5xl"
               onClick={(e) => e.stopPropagation()}
             >
               <Card className="border-0 shadow-2xl bg-card overflow-hidden">
@@ -705,15 +763,16 @@ const Team = () => {
                   </div>
                 </div>
 
-                <CardContent className="p-6">
-                  <Badge className="bg-primary/10 text-primary mb-4">
+                <CardContent className="p-6 overflow-y-scroll max-h-[60vh]">
+                  {/* <Badge className="bg-primary/10 text-primary mb-4">
                     {selectedMember.domain}
-                  </Badge>
-
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    {selectedMember.bio}
+                  </Badge> */}
+                  <p className="text-sm font-semibold text-foreground mb-2">
+                    About
                   </p>
 
+                  <ParagraphReadMore bio={selectedMember.bio} />
+                  {/* 
                   <div className="mb-4">
                     <p className="text-sm font-semibold text-foreground mb-2">
                       Focus Areas
@@ -725,27 +784,71 @@ const Team = () => {
                         </Badge>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="mb-6">
+                  <div className="mb-6 mt-6">
                     <p className="text-sm font-semibold text-foreground mb-2">
-                      Contribution
+                      Key Achievements
                     </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {selectedMember.contribution}
-                    </p>
+                    <ParagraphReadMore bio={selectedMember.contribution} />
                   </div>
 
                   <div className="flex gap-2">
-                    <Button variant="outline" size="icon" className="h-9 w-9">
-                      <Linkedin className="h-4 w-4" />
-                    </Button>
-                    <Button variant="outline" size="icon" className="h-9 w-9">
-                      <Twitter className="h-4 w-4" />
-                    </Button>
-                    <Button variant="outline" size="icon" className="h-9 w-9">
-                      <Mail className="h-4 w-4" />
-                    </Button>
+                    {selectedMember.twitter && (
+                      <Link href={selectedMember.twitter} target="_blank">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-9 w-9"
+                        >
+                          <Twitter className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
+                    {selectedMember.linkedin && (
+                      <Link href={selectedMember.linkedin} target="_blank">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-9 w-9"
+                        >
+                          <Linkedin className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
+                    {selectedMember.instagram && (
+                      <Link href={selectedMember.instagram} target="_blank">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-9 w-9"
+                        >
+                          <Instagram className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
+                    {selectedMember.facebook && (
+                      <Link href={selectedMember.facebook} target="_blank">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-9 w-9"
+                        >
+                          <Facebook className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
+                    {selectedMember.email && (
+                      <Link href={`mailto:${selectedMember.email}`}>
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="h-9 w-9"
+                        >
+                          <Mail className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </CardContent>
               </Card>
