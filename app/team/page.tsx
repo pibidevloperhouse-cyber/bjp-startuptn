@@ -655,7 +655,7 @@ const Team = () => {
                   Core Committee
                 </h3>
               </div>
-              <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+              <div className="flex gap-4 overflow-x-auto flex-wrap items-center justify-center pb-4 scrollbar-hide">
                 {coreCommittee.map((member) => (
                   <button
                     key={member.id}
@@ -684,7 +684,7 @@ const Team = () => {
                   Operational Leads
                 </h3>
               </div>
-              <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+              <div className="flex gap-4 flex-wrap justify-center items-center overflow-x-auto pb-4 scrollbar-hide">
                 {operationalTeam.map((member) => (
                   <button
                     key={member.id}
@@ -713,7 +713,7 @@ const Team = () => {
                   Extended Team
                 </h3>
               </div>
-              <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+              <div className="flex gap-4 overflow-x-auto flex-wrap items-center justify-center pb-4 scrollbar-hide">
                 {extendedTeam.map((member) => (
                   <button
                     key={member.id}
@@ -778,7 +778,17 @@ const Team = () => {
                   </div>
                 </div>
 
-                <CardContent className="p-6 overflow-y-scroll max-h-[60vh]">
+                <CardContent
+                  className={`p-6 overflow-y-scroll max-h-[60vh] custom-scrollbar ${
+                    selectedMember.orbit === 1
+                      ? "scrollbar-red"
+                      : selectedMember.orbit === 2
+                        ? "scrollbar-blue"
+                        : selectedMember.orbit === 3
+                          ? "scrollbar-green"
+                          : ""
+                  }`}
+                >
                   {/* <Badge className="bg-primary/10 text-primary mb-4">
                     {selectedMember.domain}
                   </Badge> */}

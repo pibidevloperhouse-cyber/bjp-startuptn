@@ -3,43 +3,52 @@
 import { useState } from "react";
 import Link from "next/link";
 
+type Part =
+  | string
+  | { type: "link"; href: string; text: string }
+  | { type: "br" };
+
 export default function ParagraphReadMore({ bio }: { bio: string }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const MAX_LENGTH = 200;
 
-  // Regex to match <link href="URL">TEXT</link>
-  const linkRegex = /<link\s+href="([^"]+)">([^<]+)<\/link>/g;
+  const regex = /<link\s+href="([^"]+)">([^<]+)<\/link>|<br\s*\/?>/g;
 
-  // Convert custom link tags into structured parts
-  const parts: (string | { href: string; text: string })[] = [];
+  const parts: Part[] = [];
   let lastIndex = 0;
   let match;
 
-  while ((match = linkRegex.exec(bio)) !== null) {
+  while ((match = regex.exec(bio)) !== null) {
     if (match.index > lastIndex) {
       parts.push(bio.slice(lastIndex, match.index));
     }
 
-    parts.push({
-      href: match[1],
-      text: match[2],
-    });
+    if (match[1] && match[2]) {
+      parts.push({
+        type: "link",
+        href: match[1],
+        text: match[2],
+      });
+    } else {
+      parts.push({ type: "br" });
+    }
 
-    lastIndex = linkRegex.lastIndex;
+    lastIndex = regex.lastIndex;
   }
 
   if (lastIndex < bio.length) {
     parts.push(bio.slice(lastIndex));
   }
 
-  // Convert all to plain text for length calculation
   const plainText = parts
-    .map((part) => (typeof part === "string" ? part : part.text))
+    .map((part) => {
+      if (typeof part === "string") return part;
+      if (part.type === "link") return part.text;
+    })
     .join("");
 
   const isLong = plainText.length > MAX_LENGTH;
-
   const displayLength = isExpanded ? plainText.length : MAX_LENGTH;
 
   let currentLength = 0;
@@ -52,7 +61,9 @@ export default function ParagraphReadMore({ bio }: { bio: string }) {
       const textToShow = part.slice(0, remaining);
       currentLength += textToShow.length;
       return <span key={index}>{textToShow}</span>;
-    } else {
+    }
+
+    if (part.type === "link") {
       const remaining = displayLength - currentLength;
       const textToShow = part.text.slice(0, remaining);
       currentLength += textToShow.length;
@@ -68,6 +79,12 @@ export default function ParagraphReadMore({ bio }: { bio: string }) {
         </Link>
       );
     }
+
+    if (part.type === "br") {
+      return <br key={index} />;
+    }
+
+    return null;
   });
 
   return (
