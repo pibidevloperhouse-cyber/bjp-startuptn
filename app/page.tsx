@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import ParallaxHero from "@/components/ParallaxHero";
 import ScrollReveal from "@/components/ScrollReveal";
 import Link from "next/link";
