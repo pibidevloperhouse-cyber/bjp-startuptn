@@ -88,6 +88,23 @@ const Index = () => {
                 </ScrollReveal>
               ))}
             </div>
+
+            <ScrollReveal delay={0.7}>
+              <div className="mt-16 max-w-5xl mx-auto">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-primary/20">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src="/video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </ParallaxHero>
