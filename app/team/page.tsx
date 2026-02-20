@@ -65,6 +65,19 @@ const coreCommittee: TeamMember[] = [
     initials: "AK",
     orbit: 1,
   },
+  {
+    id: 17,
+    name: "Anitha Ravichandran",
+    role: "Government Liaison Specialist",
+    domain: "",
+    summary: "",
+    focusAreas: [],
+    bio: `Leads Tamil Nadu Government consulting initiatives across development, governance, and civic transformation sectors.`,
+    contribution:
+      "Executed multi-department government projects across Rural Development, Women Empowerment, Sanitation, and Skill Development. Delivered end-to-end tender execution and KPI-aligned outcomes. Coordinated relief support for 1,200+ families and contributed to large-scale civic initiatives engaging 3,000+ participants.",
+    initials: "AR",
+    orbit: 1,
+  },
 ];
 
 const operationalTeam: TeamMember[] = [
