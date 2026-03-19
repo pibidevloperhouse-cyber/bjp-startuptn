@@ -54,7 +54,7 @@ BJYM Startup Cell`,
         // Email to admin
         await transporter.sendMail({
             from: `"BJYM Startup Cell" <${process.env.USER}>`,
-            to: "vairajothipalani@gmail.com",
+            to: "pibi.devloperhouse@gmail.com",
             subject: "New Contact Form Message",
             text: `New message received
 
